@@ -3,7 +3,7 @@
     <script type="text/javascript">
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
-      var CLIENT_ID = '<YOUR_CLIENT_ID>';
+      var CLIENT_ID = '730356070445-002l1n4vto2vvst3cqtu57mbnaffh740.apps.googleusercontent.com';
 
       var SCOPES = ["https://www.googleapis.com/auth/calendar.readonly"];
 
@@ -13,7 +13,7 @@
       function checkAuth() {
         gapi.auth.authorize(
           {
-            'client_id': CLIENT_ID,
+            'client_id': '730356070445-002l1n4vto2vvst3cqtu57mbnaffh740.apps.googleusercontent.com',
             'scope': SCOPES.join(' '),
             'immediate': true
           }, handleAuthResult);
@@ -45,7 +45,7 @@
        */
       function handleAuthClick(event) {
         gapi.auth.authorize(
-          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
+        {client_id: '730356070445-002l1n4vto2vvst3cqtu57mbnaffh740.apps.googleusercontent.com', scope: 'https://www.googleapis.com/auth/calendar', immediate: false},
           handleAuthResult);
         return false;
       }
