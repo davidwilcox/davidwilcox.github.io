@@ -34,7 +34,6 @@
                     $window.gapi.client.load(api, version, undefined, url).then(function(response) {
                         var result = {'api': api, 'version': version, 'url': url};
                         if(response && response.hasOwnProperty('error')) {
-                            console.log(version);
                             deferred.reject(result);
                         } else {
                             deferred.resolve(result);
@@ -186,7 +185,7 @@
                         config.hd = DOMAIN;
                     $window.gapi.auth.authorize(config, authorizeCallback);
                 }
-                
+
                 if(!mode && isLoad === true){
                     // don't break the caller stack with async tasks
                     executeSignin(mode, authorizeCallback);
@@ -273,7 +272,7 @@
                     signin(true, function() {
                         getUser().then(function (user) {
                             deferred.resolve(user);
-                        }, function () {
+                        }, function (resp) {
                             deferred.reject();
                         });
                     });
@@ -285,7 +284,7 @@
                     signin(false, function() {
                         getUser().then(function (user) {
                             deferred.resolve(user);
-                        }, function () {
+                        }, function (resp) {
                             deferred.reject();
                         });
                     });
