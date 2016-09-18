@@ -77,10 +77,11 @@
           return scope._hours24 = val != null ? val : scDateTimeConfig.displayTwentyfour;
         });
         attrs.$observe('mindate', function(val) {
-          if ((val != null) && Date.parse(val)) {
-            scope.restrictions.mindate = new Date(val);
-            return scope.restrictions.mindate.setHours(0, 0, 0, 0);
-          }
+            console.log(val);
+            if ((val != null) && Date.parse(val)) {
+                scope.restrictions.mindate = new Date(val);
+                return scope.restrictions.mindate.setHours(0, 0, 0, 0);
+            }
         });
         attrs.$observe('maxdate', function(val) {
           if ((val != null) && Date.parse(val)) {
