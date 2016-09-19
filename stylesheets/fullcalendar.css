@@ -483,10 +483,6 @@ be a descendant of the grid when it is being dragged.
 	overflow: hidden;
 }
 
-.fc-day-grid-event .fc-time {
-	font-weight: bold;
-}
-
 /* resize handle (outside of fc-content, so can go outside of bounds) */
 
 .fc-day-grid-event .fc-resizer {
